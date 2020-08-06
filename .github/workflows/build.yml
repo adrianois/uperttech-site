@@ -29,3 +29,6 @@ jobs:
         with:
           name: build
           path: build/
+
+      - name: Save build
+        uses: actions/download-artifact@v2
