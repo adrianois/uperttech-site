@@ -36,7 +36,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git add build/
           git commit -m "build: Building files"
-        if: ${{ always() }}
+        continue-on-error: true
 
       - name: Push changes
         uses: ad-m/github-push-action@master
