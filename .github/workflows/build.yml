@@ -1,40 +1,40 @@
 name: Build
 
 on:
-    push:
-        branches:
-            - master
+  push:
+    branches:
+      - master
 
 jobs:
-    deploy:
-        runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-latest
 
     steps:
-        - name: Checkout
+      - name: Checkout
         uses: actions/checkout@v2
 
-        - name: Setup Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-            node-version: 12.x
+          node-version: 12.x
 
-        - name: Cache Node.js modules
+      - name: Cache Node.js modules
         uses: actions/cache@v2
         with:
-            path: ~/.npm
-            key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
-            restore-keys: |
-                ${{ runner.OS }}-node-
-                ${{ runner.OS }}-
-        
-        - name: Install dependencies
+          path: ~/.npm
+          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-node-
+            ${{ runner.OS }}-
+
+      - name: Install dependencies
         run: yarn
 
-        - name: Run build
+      - name: Build
         run: yarn build
-    
-        - name: Upload build
+
+      - name: Upload build
         uses: actions/upload-artifact@v2
         with:
-            name: build
-            path: build/
+          name: build
+          path: build/
