@@ -38,7 +38,7 @@ export const Action = styled.a`
   padding-bottom: 4px;
 `;
 
-const Img = styled.img`
+const BackgroundImg = styled.img`
   position: fixed;
   z-index: -1;
   height: 100%;
@@ -46,5 +46,5 @@ const Img = styled.img`
 `;
 
 export function Background() {
-  return <Img src="/background.png" />;
+  return <BackgroundImg src="/background.png" />;
 }
