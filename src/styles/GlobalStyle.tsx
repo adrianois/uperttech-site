@@ -6,7 +6,11 @@ export default createGlobalStyle`
   -webkit-font-feature-settings: "liga" on, "calt" on;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: "JetBrains Mono";
+  font-family: 'Raleway', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: unset;
 }
 html {
   box-sizing: border-box;
@@ -34,10 +38,6 @@ ul {
 ol,
 ul {
   list-style: none;
-}
-img {
-  max-width: 100%;
-  height: auto;
 }
 #root, body, html {
   height: 100%;
