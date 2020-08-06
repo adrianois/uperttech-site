@@ -46,5 +46,5 @@ const BackgroundImg = styled.img`
 `;
 
 export function Background() {
-  return <BackgroundImg src="/background.png" />;
+  return <BackgroundImg src="/background.svg" />;
 }
