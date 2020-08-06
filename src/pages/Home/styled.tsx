@@ -38,13 +38,13 @@ export const Action = styled.a`
   padding-bottom: 4px;
 `;
 
-export function Background() {
-  const Img = styled.img`
-    position: fixed;
-    z-index: -1;
-    height: 100%;
-    right: 0;
-  `;
+const Img = styled.img`
+  position: fixed;
+  z-index: -1;
+  height: 100%;
+  right: 0;
+`;
 
+export function Background() {
   return <Img src="/background.png" />;
 }
