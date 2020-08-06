@@ -30,7 +30,7 @@ jobs:
           name: build
           path: build/
 
-      - name: Commit files
+      - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
