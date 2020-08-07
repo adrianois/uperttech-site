@@ -53,6 +53,7 @@ const StyledBrand = styled(Brand)`
 
 const StyledNavbar = styled.div`
   position: fixed;
+  z-index: 1;
   width: 100%;
   display: flex;
   padding: 25px 40px;
