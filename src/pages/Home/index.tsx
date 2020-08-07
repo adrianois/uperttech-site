@@ -1,14 +1,7 @@
 import React from "react";
-import {
-  Page,
-  Title,
-  Container,
-  Text,
-  Subtitle,
-  Action,
-  Background,
-} from "./styled";
+import { Page, Title, Container, Text, Subtitle, Background } from "./styled";
 import Navbar from "../../components/Navbar";
+import ActionButtom from "../../components/ActionButtom";
 
 export default function Home(): JSX.Element {
   return (
@@ -22,7 +15,10 @@ export default function Home(): JSX.Element {
             expertise em gerência de projetos e em desenvolvimento de software
             para produzir soluções que vão direto ao ponto.
           </Subtitle>
-          <Action href="#">Solicite um orçamento</Action>
+          <ActionButtom
+            text="Solicite um orçamento"
+            style={{ width: "300px" }}
+          />
         </Text>
         <Background />
       </Container>
